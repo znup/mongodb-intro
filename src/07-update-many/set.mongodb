@@ -1,0 +1,42 @@
+use("sample_training");
+
+// db.zips.updateMany(
+//   // Query
+//   {
+//     city: "CLEVELAND",
+//   },
+//   // Update - operators
+//   {
+//     $set: {
+//       myAttr: "Dummy",
+//     },
+//   }
+// );
+
+// $rename
+// db.zips.updateMany(
+//   // Query
+//   {
+//     city: "CLEVELAND",
+//   },
+//   // Update - operators
+//   {
+//     $rename: {
+//       "Dummy Data": "Dummy_Data",
+//     },
+//   }
+// );
+
+// $unset
+db.zips.updateMany(
+  // Query
+  {
+    city: "CLEVELAND",
+  },
+  // Update - operators
+  {
+    $unset: {
+      Dummy_Data: "",
+    },
+  }
+);

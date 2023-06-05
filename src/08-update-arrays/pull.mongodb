@@ -1,0 +1,21 @@
+use("p_store");
+
+// db.inventory.updateOne(
+//   { _id: 4 },
+//   {
+//     $pull: {
+//       tags: "headphone",
+//     },
+//   }
+// );
+
+db.inventory.updateMany(
+  {},
+  {
+    $pull: {
+      tags: {
+        $in: ["appliance", "school"],
+      },
+    },
+  }
+);

@@ -1,0 +1,32 @@
+use("p_store");
+
+// db.iot.insertOne({
+//   sensor: "A001",
+//   date: "2022-01-03",
+//   readings: [1212],
+// });
+
+// // $pop
+// db.iot.updateOne(
+//   {
+//     sensor: "A001",
+//     date: "2022-01-03",
+//   },
+//   {
+//     $pop: {
+//       readings: 1,
+//     },
+//   }
+// );
+
+db.iot.updateOne(
+  {
+    sensor: "A001",
+    date: "2022-01-03",
+  },
+  {
+    $push: {
+      readings: 2323,
+    },
+  }
+);

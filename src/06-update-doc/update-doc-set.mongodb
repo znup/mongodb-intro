@@ -1,0 +1,14 @@
+use("p_store");
+
+db.products.updateOne(
+  // query
+  { _id: 2 },
+  // change => operators
+  {
+    $set: {
+      name: "Change product",
+      price: 222,
+      tags: ["A", "B", "C"],
+    },
+  }
+);

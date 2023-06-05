@@ -1,0 +1,7 @@
+use("p_store");
+
+// db.products.deleteOne({ _id: 1 });
+// // Eliminar por id si el genero el id
+// db.products.deleteOne({ _id: ObjectId("1dsa257") });
+
+db.products.deleteMany({ price: 100 });
