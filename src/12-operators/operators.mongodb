@@ -1,0 +1,17 @@
+use("p_store");
+
+// Using $gt(>) and $gte(>=)
+// db.inventory.find({ qty: { $gt: 20 } });
+// db.inventory.find({ qty: { $gte: 20 } });
+
+// Using $lt(<) and $lte(<=)
+// db.inventory.find({ qty: { $lt: 20 } });
+// db.inventory.find({ qty: { $lte: 20 } });
+
+// Join
+// db.inventory.find({ qty: { $gte: 25, $lte: 35 } });
+// db.inventory.find({ qty: { $gte: 5, $lte: 25 } });
+db.inventory.find({
+  "item.name": "ab",
+  qty: { $gte: 5, $lte: 25 },
+});
