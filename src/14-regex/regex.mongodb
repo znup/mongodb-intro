@@ -1,0 +1,8 @@
+use("p_store");
+
+// db.inventory.find({'item.description': 'Single line description.'});
+// db.inventory.find({ "item.description": { $regex: /LINE/i } });
+// db.inventory.find({ "item.description": { $regex: /LINE$/i } });
+// db.inventory.find({ "item.description": { $regex: /^single/i } });
+// db.inventory.find({ "item.description": { $regex: /^s/i } });
+db.inventory.find({ "item.description": { $regex: /^s/im } });
