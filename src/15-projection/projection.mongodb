@@ -1,0 +1,13 @@
+use("sample_training");
+
+db.trips.find(
+  // query
+  {
+    tripduration: {
+      $lte: 500,
+    },
+    // usertype: "Subscriber",
+  },
+  // Projection
+  { tripduration: 1, usertype: 1, _id: 0 }
+);
